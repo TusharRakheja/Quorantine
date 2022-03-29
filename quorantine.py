@@ -18,7 +18,7 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 
 lang_list = ['fr', 'es', 'hi', 'ja', 'de', 'it', 'id', 'pt', 'nl', 'da', 'fi', 'no', 'sv', 'mr', 'bn', 'ta', 'ar', 'he', 'gu', 'kn', 'ml', 'te', 'pl']
 
-ignore_list =  ["{}.quora.com".format(lang) for lang in lang_list] + ['/following', '/answer', '/topic/', '/messages/'] + ([] if ARGS.spaces is None else ARGS.spaces)
+ignore_list =  ["{}.quora.com".format(lang) for lang in lang_list] + ['/following', '/answer', '/topic/', '/messages/', '/notifications'] + ([] if ARGS.spaces is None else ARGS.spaces)
 
 # If you want questions with certain keywords to be ignored, add them here. Not making this a CLI arg since it can potentially be long.
 keep_list = []
@@ -66,11 +66,14 @@ while not end_of_page:
         last_height = driver.execute_script("return document.body.scrollHeight")
         for i in range(10):
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            new_height = driver.execute_script("return document.body.scrollHeight")
+            if new_height == last_height:
+                end_of_page = True
+                break
+            last_height = new_height
             time.sleep(SCROLL_PAUSE_TIME)
 
-        new_height = driver.execute_script("return document.body.scrollHeight")
-        if new_height == last_height:
-            end_of_page = True
+        if end_of_page:
             break
         questions = driver.find_elements_by_css_selector('a.q-box')
 
@@ -143,3 +146,5 @@ while not end_of_page:
 
             driver.close()
             driver.switch_to.window(driver.window_handles[0])
+
+driver.get('https://www.quora.com/profile/{}/answers'.format(ARGS.username))
