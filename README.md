@@ -1,3 +1,4 @@
+<br>
 <img src="https://github.com/TusharRakheja/Quorantine/raw/main/title.png" width="auto" height="60px" />
 
 ___
