@@ -28,10 +28,12 @@ optional arguments:
 
 ### Considerations
 
-Some things to note before executing the script:
 - It's hard-coded to Google Chrome, but should be easy to use a different browser by changing this line: 
   - `driver = webdriver.Chrome(ChromeDriverManager().install())`
+
 - If you want to preserve your answers to certain questions, add some keywords found in the text of those questions to the `keep_list` object. 
   - Any question which has any of the words in `keep_list` will be ignored.
   - This was not made a CLI argument since there can potentially be lots of words in the list.
-- I tested this script with several Quora accounts. For some of them, it unexpectedly put a CAPTCHA box on the login screen. This won't work if your account shows that behavior.
+
+- I tested this script with several Quora accounts. For some of them, it unexpectedly put a CAPTCHA box on the login screen. 
+  - This won't work if your account shows that behavior.
