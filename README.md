@@ -1,8 +1,10 @@
-<img src="https://github.com/TusharRakheja/Quorantine/raw/main/pic.png" width="auto" height="60px" />
+<img src="https://github.com/TusharRakheja/Quorantine/raw/main/title.png" width="auto" height="60px" />
 
 ___
 
 Quorantine is a Selenium script to delete all your Quora answers and give you back some of your privacy.
+
+<img src="https://github.com/TusharRakheja/Quorantine/raw/main/quorantine_demo.webm" />
 
 ### Dependencies
 
