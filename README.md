@@ -35,5 +35,7 @@ optional arguments:
   - Any question which has any of the words in `keep_list` will be ignored.
   - This was not made a CLI argument since there can potentially be lots of words in the list.
 
+- You may need to run this script several times to delete _all_ of your answers.
+
 - I tested this script with several Quora accounts. For some of them, it unexpectedly put a CAPTCHA box on the login screen. 
   - This won't work if your account shows that behavior.
