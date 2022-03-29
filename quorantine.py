@@ -21,7 +21,7 @@ lang_list = ['fr', 'es', 'hi', 'ja', 'de', 'it', 'id', 'pt', 'nl', 'da', 'fi', '
 ignore_list =  ["{}.quora.com".format(lang) for lang in lang_list] + ['/following', '/answer', '/topic/', '/messages/'] + ([] if ARGS.spaces is None else ARGS.spaces)
 
 # If you want questions with certain keywords to be ignored, add them here. Not making this a CLI arg since it can potentially be long.
-keep_list = ['or', 'rude']
+keep_list = []
 
 driver.get('https://www.quora.com')
 time.sleep(5)
