@@ -39,3 +39,7 @@ optional arguments:
 
 - I tested this script with several Quora accounts. For some of them, it unexpectedly put a CAPTCHA box on the login screen. 
   - This won't work if your account shows that behavior.
+
+### License
+
+Copyright (c) 2022 Tushar Rakheja (The MIT License)
