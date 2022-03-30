@@ -3,9 +3,11 @@
 
 ___
 
-Quorantine is a Selenium script to delete all your Quora answers and give you back some of your privacy.
+<img src="https://github.com/TusharRakheja/Quorantine/blob/main/quorantine_demo.gif" />
 
-<img src="https://github.com/TusharRakheja/Quorantine/raw/main/quorantine_demo.webm" />
+___
+
+Quorantine is a Selenium script to delete all your Quora answers and give you back some of your privacy.
 
 ### Dependencies
 
